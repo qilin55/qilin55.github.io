@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> git-ssh-key · Hexo</title><meta name="description" content="git-ssh-key - John Doe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/rose-qilin.jpg"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Hexo"><meta name="generator" content="Hexo 4.0.0"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/rose-qilin.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/qilin55" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">git-ssh-key</h1><div class="post-info">Apr 2, 2019</div><div class="post-content"><h1 id="设置git-sshkey"><a href="#设置git-sshkey" class="headerlink" title="设置git sshkey"></a>设置git sshkey</h1><ul>
+<li><p><strong>首先设置git的名字和邮箱</strong></p>
+</li>
+<li><p><code>git config --global user.name &quot;yourname&quot;</code></p>
+</li>
+<li><p><code>git config --global user.email &quot;your@email.com&quot;</code></p>
+</li>
+<li><p><strong>然后如果有.ssh文件夹 先删除文件夹</strong></p>
+</li>
+<li><p><strong>然后输入git命令</strong></p>
+</li>
+<li><p><code>ssh-keygen -t rsa -C &quot;your@email.com&quot;</code></p>
+</li>
+<li><p><em>然后一直按回车就好</em></p>
+</li>
+<li><p><strong>最后在github添加sshkey，把你之前生成的在.ssh文件夹下的id_rsa.pub文件里的文本复制出来就ok了</strong></p>
+</li>
+<li><p>可以输入<code>ssh -T git@github.com</code>测试 输入<code>yes</code>就成功了</p>
+</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/04/02/nextcloud/" class="prev">PREV</a><a href="/2018/06/05/input-file-onchange/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2019 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

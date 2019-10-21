@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> ss-and-bbr · Hexo</title><meta name="description" content="ss-and-bbr - John Doe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/rose-qilin.jpg"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Hexo"><meta name="generator" content="Hexo 4.0.0"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/rose-qilin.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/qilin55" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">ss-and-bbr</h1><div class="post-info">Jun 5, 2019</div><div class="post-content"><h1 id="vultr搭建ss-Google-bbr-加速"><a href="#vultr搭建ss-Google-bbr-加速" class="headerlink" title="vultr搭建ss + Google bbr 加速"></a>vultr搭建ss + Google bbr 加速</h1><ul>
+<li><p><strong>购买vultr并部署服务器(centOS7)</strong></p>
+</li>
+<li><p><code>https://www.vultr.com/?ref=7892970-4F</code></p>
+</li>
+<li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p>
+</li>
+<li><p><code>ssh root@ip</code></p>
+</li>
+<li><p><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code></p>
+</li>
+<li><p><code>chmod +x shadowsocks.sh</code></p>
+</li>
+<li><p><code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code></p>
+</li>
+<li><p>shadowsocks相关操作：启动、停止、重启、状态<code>/etc/init.d/shadowsocks start stop restart status</code></p>
+</li>
+<li><p>卸载shadowsocks<code>./shadowsocks.sh uninstall</code></p>
+</li>
+<li><p>单用户配置{<br>“server”:”your_server_ip”,<br>“server_port”:8989,<br>“local_address”:”127.0.0.1”,<br>“local_port”:1080,<br>“password”:”yourpassword”,<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p>
+</li>
+<li><p>多用户配置{<br>“server”:”your_server_ip”,<br>“local_address”: “127.0.0.1”,<br>“local_port”:1080,<br>“port_password”:{</p>
+<pre><code>&quot;8989&quot;:&quot;password0&quot;,
+&quot;9001&quot;:&quot;password1&quot;,
+&quot;9002&quot;:&quot;password2&quot;,
+&quot;9003&quot;:&quot;password3&quot;,
+&quot;9004&quot;:&quot;password4&quot;</code></pre><p>},<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p>
+</li>
+<li><p><strong>安装bbr加速</strong></p>
+</li>
+<li><p><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></p>
+</li>
+<li><p><strong>输入以下命令，返回值中有bbr则证明安装加速成功</strong></p>
+</li>
+<li><p><code>sysctl net.ipv4.tcp_available_congestion_control</code></p>
+</li>
+<li><p><em>显示</em> <code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p>
+</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/10/21/prayer/" class="prev">PREV</a><a href="/2019/04/02/nextcloud/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2019 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

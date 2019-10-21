@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> mac-reset-mysql-password · Hexo</title><meta name="description" content="mac-reset-mysql-password - John Doe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/rose-qilin.jpg"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Hexo"><meta name="generator" content="Hexo 4.0.0"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/rose-qilin.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/qilin55" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">mac-reset-mysql-password</h1><div class="post-info">Oct 21, 2019</div><div class="post-content"><h1 id="进行下述操作必须先停止mysql服务"><a href="#进行下述操作必须先停止mysql服务" class="headerlink" title="进行下述操作必须先停止mysql服务"></a>进行下述操作必须先停止mysql服务</h1><ul>
+<li>切换到mysql安装目录</li>
+<li><code>cd /usr/local/mysql/bin</code></li>
+<li>获取管理员权限</li>
+<li><code>sudo su</code></li>
+<li>开启mysql安全模式，可以跳过密码验证</li>
+<li><code>./mysqld_safe --skip-grant-tables &amp;</code></li>
+<li>回车然后输入<code>./mysql -u root</code>进入mysql</li>
+<li>启用mysql数据库</li>
+<li><code>use mysql;</code></li>
+<li>修改user表下root用户的登陆密码</li>
+<li><code>update user set authentication_string=‘111222’ where User=&#39;root&#39;;</code></li>
+</ul>
+<h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul>
+<li><p>MAC 允许任何来源安装的app</p>
+<p><code>sudo spctl --master-disable</code></p>
+</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/10/21/prayer/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2019 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
