@@ -40,29 +40,6 @@
   </entry>
   
   <entry>
-    <title>mac挂载文件命令</title>
-    <link href="http://yoursite.com/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2022/03/08/mac挂载文件命令/</id>
-    <published>2022-03-08T09:47:37.997Z</published>
-    <updated>2022-03-08T09:47:37.997Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="挂载写权限"><a href="#挂载写权限" class="headerlink" title="挂载写权限"></a>挂载写权限</h3><p><code>sudo mount -uw /</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;挂载写权限&quot;&gt;&lt;a href=&quot;#挂载写权限&quot; class=&quot;headerlink&quot; title=&quot;挂载写权限&quot;&gt;&lt;/a&gt;挂载写权限&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo mount -uw /&lt;/code&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>input-file-onchange</title>
     <link href="http://yoursite.com/2022/03/08/input-file-onchange/"/>
     <id>http://yoursite.com/2022/03/08/input-file-onchange/</id>
@@ -85,20 +62,42 @@
   </entry>
   
   <entry>
-    <title>nextcloud</title>
-    <link href="http://yoursite.com/2022/03/08/nextcloud/"/>
-    <id>http://yoursite.com/2022/03/08/nextcloud/</id>
+    <title>ss-and-bbr</title>
+    <link href="http://yoursite.com/2022/03/08/ss-and-bbr/"/>
+    <id>http://yoursite.com/2022/03/08/ss-and-bbr/</id>
     <published>2022-03-08T09:47:37.997Z</published>
     <updated>2022-03-08T09:47:37.997Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="自制云盘-nextcloud"><a href="#自制云盘-nextcloud" class="headerlink" title="自制云盘 nextcloud"></a>自制云盘 nextcloud</h1><ul><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><h1 id="通过yum源安装docker"><a href="#通过yum源安装docker" class="headerlink" title="通过yum源安装docker"></a>通过yum源安装docker</h1></li><li><p><code>sudo yum -y install docker</code></p></li><li><h1 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h1></li><li><p><code>sudo systemctl start docker</code></p></li><li><h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1></li><li><p><code>sudo systemctl enable docker</code></p></li><li><p><strong>获取nextcloud镜像, 完成网盘搭建</strong></p></li><li><p><code>docker run -d -p 8080:80 nextcloud</code></p></li><li><p><strong>访问自己ip的8080端口</strong></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="vultr搭建ss-Google-bbr-加速"><a href="#vultr搭建ss-Google-bbr-加速" class="headerlink" title="vultr搭建ss + Google bbr 加速"></a>vultr搭建ss + Google bbr 加速</h1><ul><li><p><strong>购买vultr并部署服务器(centOS7)</strong></p></li><li><p><code>https://www.vultr.com/?ref=7892970-4F</code></p></li><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><p><code>ssh root@ip</code></p></li><li><p><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code></p></li><li><p><code>chmod +x shadowsocks.sh</code></p></li><li><p><code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code></p></li><li><p>shadowsocks相关操作：启动、停止、重启、状态<code>/etc/init.d/shadowsocks start stop restart status</code></p></li><li><p>卸载shadowsocks<code>./shadowsocks.sh uninstall</code></p></li><li><p>单用户配置{<br>“server”:”your_server_ip”,<br>“server_port”:8989,<br>“local_address”:”127.0.0.1”,<br>“local_port”:1080,<br>“password”:”yourpassword”,<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p></li><li><p>多用户配置{<br>“server”:”your_server_ip”,<br>“local_address”: “127.0.0.1”,<br>“local_port”:1080,<br>“port_password”:{</p><pre><code>&quot;8989&quot;:&quot;password0&quot;,&quot;9001&quot;:&quot;password1&quot;,&quot;9002&quot;:&quot;password2&quot;,&quot;9003&quot;:&quot;password3&quot;,&quot;9004&quot;:&quot;password4&quot;</code></pre><p>},<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p></li><li><p><strong>安装bbr加速</strong></p></li><li><p><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></p></li><li><p><strong>输入以下命令，返回值中有bbr则证明安装加速成功</strong></p></li><li><p><code>sysctl net.ipv4.tcp_available_congestion_control</code></p></li><li><p><em>显示</em> <code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;自制云盘-nextcloud&quot;&gt;&lt;a href=&quot;#自制云盘-nextcloud&quot; class=&quot;headerlink&quot; title=&quot;自制云盘 nextcloud&quot;&gt;&lt;/a&gt;自制云盘 nextcloud&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;登陆到服务
+        &lt;h1 id=&quot;vultr搭建ss-Google-bbr-加速&quot;&gt;&lt;a href=&quot;#vultr搭建ss-Google-bbr-加速&quot; class=&quot;headerlink&quot; title=&quot;vultr搭建ss + Google bbr 加速&quot;&gt;&lt;/a&gt;vultr搭建ss + Goo
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mac挂载文件命令</title>
+    <link href="http://yoursite.com/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2022/03/08/mac挂载文件命令/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="挂载写权限"><a href="#挂载写权限" class="headerlink" title="挂载写权限"></a>挂载写权限</h3><p><code>sudo mount -uw /</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;挂载写权限&quot;&gt;&lt;a href=&quot;#挂载写权限&quot; class=&quot;headerlink&quot; title=&quot;挂载写权限&quot;&gt;&lt;/a&gt;挂载写权限&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo mount -uw /&lt;/code&gt;&lt;/p&gt;
+
       
     
     </summary>
@@ -134,19 +133,20 @@
   </entry>
   
   <entry>
-    <title>ss-and-bbr</title>
-    <link href="http://yoursite.com/2022/03/08/ss-and-bbr/"/>
-    <id>http://yoursite.com/2022/03/08/ss-and-bbr/</id>
+    <title>nextcloud</title>
+    <link href="http://yoursite.com/2022/03/08/nextcloud/"/>
+    <id>http://yoursite.com/2022/03/08/nextcloud/</id>
     <published>2022-03-08T09:47:37.997Z</published>
     <updated>2022-03-08T09:47:37.997Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vultr搭建ss-Google-bbr-加速"><a href="#vultr搭建ss-Google-bbr-加速" class="headerlink" title="vultr搭建ss + Google bbr 加速"></a>vultr搭建ss + Google bbr 加速</h1><ul><li><p><strong>购买vultr并部署服务器(centOS7)</strong></p></li><li><p><code>https://www.vultr.com/?ref=7892970-4F</code></p></li><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><p><code>ssh root@ip</code></p></li><li><p><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code></p></li><li><p><code>chmod +x shadowsocks.sh</code></p></li><li><p><code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code></p></li><li><p>shadowsocks相关操作：启动、停止、重启、状态<code>/etc/init.d/shadowsocks start stop restart status</code></p></li><li><p>卸载shadowsocks<code>./shadowsocks.sh uninstall</code></p></li><li><p>单用户配置{<br>“server”:”your_server_ip”,<br>“server_port”:8989,<br>“local_address”:”127.0.0.1”,<br>“local_port”:1080,<br>“password”:”yourpassword”,<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p></li><li><p>多用户配置{<br>“server”:”your_server_ip”,<br>“local_address”: “127.0.0.1”,<br>“local_port”:1080,<br>“port_password”:{</p><pre><code>&quot;8989&quot;:&quot;password0&quot;,&quot;9001&quot;:&quot;password1&quot;,&quot;9002&quot;:&quot;password2&quot;,&quot;9003&quot;:&quot;password3&quot;,&quot;9004&quot;:&quot;password4&quot;</code></pre><p>},<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p></li><li><p><strong>安装bbr加速</strong></p></li><li><p><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></p></li><li><p><strong>输入以下命令，返回值中有bbr则证明安装加速成功</strong></p></li><li><p><code>sysctl net.ipv4.tcp_available_congestion_control</code></p></li><li><p><em>显示</em> <code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="自制云盘-nextcloud"><a href="#自制云盘-nextcloud" class="headerlink" title="自制云盘 nextcloud"></a>自制云盘 nextcloud</h1><ul><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><h1 id="通过yum源安装docker"><a href="#通过yum源安装docker" class="headerlink" title="通过yum源安装docker"></a>通过yum源安装docker</h1></li><li><p><code>sudo yum -y install docker</code></p></li><li><h1 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h1></li><li><p><code>sudo systemctl start docker</code></p></li><li><h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1></li><li><p><code>sudo systemctl enable docker</code></p></li><li><p><strong>获取nextcloud镜像, 完成网盘搭建</strong></p></li><li><p><code>docker run -d -p 8080:80 nextcloud</code></p></li><li><p><strong>访问自己ip的8080端口</strong></p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;vultr搭建ss-Google-bbr-加速&quot;&gt;&lt;a href=&quot;#vultr搭建ss-Google-bbr-加速&quot; class=&quot;headerlink&quot; title=&quot;vultr搭建ss + Google bbr 加速&quot;&gt;&lt;/a&gt;vultr搭建ss + Goo
+        &lt;h1 id=&quot;自制云盘-nextcloud&quot;&gt;&lt;a href=&quot;#自制云盘-nextcloud&quot; class=&quot;headerlink&quot; title=&quot;自制云盘 nextcloud&quot;&gt;&lt;/a&gt;自制云盘 nextcloud&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;登陆到服务
       
     
     </summary>
