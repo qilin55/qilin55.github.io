@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>绮林的blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2022-03-08T09:47:37.997Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>qilin55</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>input-file-onchange</title>
+    <link href="http://yoursite.com/2022/03/08/input-file-onchange/"/>
+    <id>http://yoursite.com/2022/03/08/input-file-onchange/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="input-onchange事件触发问题"><a href="#input-onchange事件触发问题" class="headerlink" title="input onchange事件触发问题"></a><code>input onchange</code>事件触发问题</h1><h3 id="input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件"><a href="#input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件" class="headerlink" title="input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件"></a>input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了<code>onchange</code>事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input ref=<span class="string">'fileUpload'</span> onChange=&#123;<span class="keyword">this</span>.getFile&#125; id=<span class="string">"fileUpload"</span> type=<span class="string">"file"</span> className=<span class="string">"upload"</span>/&gt;</span><br></pre></td></tr></table></figure><h3 id="这是因为input的value值没有改变，需要我们手动清空一下-需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败"><a href="#这是因为input的value值没有改变，需要我们手动清空一下-需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败" class="headerlink" title="这是因为input的value值没有改变，需要我们手动清空一下,需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败"></a>这是因为<code>input</code>的value值没有改变，需要我们手动清空一下,需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.refs.fileUpload.value = <span class="literal">null</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;input-onchange事件触发问题&quot;&gt;&lt;a href=&quot;#input-onchange事件触发问题&quot; class=&quot;headerlink&quot; title=&quot;input onchange事件触发问题&quot;&gt;&lt;/a&gt;&lt;code&gt;input onchange&lt;/code
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mac-reset-mysql-password</title>
+    <link href="http://yoursite.com/2022/03/08/mac-reset-mysql-password/"/>
+    <id>http://yoursite.com/2022/03/08/mac-reset-mysql-password/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="进行下述操作必须先停止mysql服务"><a href="#进行下述操作必须先停止mysql服务" class="headerlink" title="进行下述操作必须先停止mysql服务"></a>进行下述操作必须先停止mysql服务</h1><ul><li>切换到mysql安装目录</li><li><code>cd /usr/local/mysql/bin</code></li><li>获取管理员权限</li><li><code>sudo su</code></li><li>开启mysql安全模式，可以跳过密码验证</li><li><code>./mysqld_safe --skip-grant-tables &amp;</code></li><li>回车然后输入<code>./mysql -u root</code>进入mysql</li><li>启用mysql数据库</li><li><code>use mysql;</code></li><li>修改user表下root用户的登陆密码</li><li><code>update user set authentication_string=‘111222’ where User=&#39;root&#39;;</code></li></ul><h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul><li><p>MAC 允许任何来源安装的app</p><p><code>sudo spctl --master-disable</code></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;进行下述操作必须先停止mysql服务&quot;&gt;&lt;a href=&quot;#进行下述操作必须先停止mysql服务&quot; class=&quot;headerlink&quot; title=&quot;进行下述操作必须先停止mysql服务&quot;&gt;&lt;/a&gt;进行下述操作必须先停止mysql服务&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mac挂载文件命令</title>
+    <link href="http://yoursite.com/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2022/03/08/mac挂载文件命令/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="挂载写权限"><a href="#挂载写权限" class="headerlink" title="挂载写权限"></a>挂载写权限</h3><p><code>sudo mount -uw /</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;挂载写权限&quot;&gt;&lt;a href=&quot;#挂载写权限&quot; class=&quot;headerlink&quot; title=&quot;挂载写权限&quot;&gt;&lt;/a&gt;挂载写权限&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo mount -uw /&lt;/code&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nextcloud</title>
+    <link href="http://yoursite.com/2022/03/08/nextcloud/"/>
+    <id>http://yoursite.com/2022/03/08/nextcloud/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="自制云盘-nextcloud"><a href="#自制云盘-nextcloud" class="headerlink" title="自制云盘 nextcloud"></a>自制云盘 nextcloud</h1><ul><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><h1 id="通过yum源安装docker"><a href="#通过yum源安装docker" class="headerlink" title="通过yum源安装docker"></a>通过yum源安装docker</h1></li><li><p><code>sudo yum -y install docker</code></p></li><li><h1 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h1></li><li><p><code>sudo systemctl start docker</code></p></li><li><h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1></li><li><p><code>sudo systemctl enable docker</code></p></li><li><p><strong>获取nextcloud镜像, 完成网盘搭建</strong></p></li><li><p><code>docker run -d -p 8080:80 nextcloud</code></p></li><li><p><strong>访问自己ip的8080端口</strong></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;自制云盘-nextcloud&quot;&gt;&lt;a href=&quot;#自制云盘-nextcloud&quot; class=&quot;headerlink&quot; title=&quot;自制云盘 nextcloud&quot;&gt;&lt;/a&gt;自制云盘 nextcloud&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;登陆到服务
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>prayer</title>
+    <link href="http://yoursite.com/2022/03/08/prayer/"/>
+    <id>http://yoursite.com/2022/03/08/prayer/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>           _ooOoo_                  o8888888o                  88&quot; . &quot;88                  (| -_- |)                   O\ = /O               ____/`---&apos;\____             .   &apos; \\| |// `.              / \\||| : |||// \            / _||||| -:- |||||- \              | | \\\ - /// | |            | \_| &apos;&apos;\---/&apos;&apos; | |             \ .-\__ `-` ___/-. /          ___`. .&apos; /--.--\ `. . __       .&quot;&quot; &apos;&lt; `.___\_&lt;|&gt;_/___.&apos; &gt;&apos;&quot;&quot;.      | | : `- \`.;`\ _ /`;.`/ - ` : | |        \ \ `-. \_ __\ /__ _/ .-` / /======`-.____`-.___\_____/___.-`____.-&apos;======                   `=---=&apos;.............................................         佛祖镇楼                  BUG辟易 佛曰:         写字楼里写字间，写字间里程序员；         程序人员写程序，又拿程序换酒钱。         酒醒只在网上坐，酒醉还来网下眠；         酒醉酒醒日复日，网上网下年复年。         但愿老死电脑间，不愿鞠躬老板前；         奔驰宝马贵者趣，公交自行程序员。         别人笑我太疯癫，我笑自己不值钱；         不见满街漂亮妹，哪个归得程序员？</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;           _ooOoo_
+                  o8888888o
+                  88&amp;quot; . &amp;quot;88
+                  (| -_- |)
+                
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ss-and-bbr</title>
+    <link href="http://yoursite.com/2022/03/08/ss-and-bbr/"/>
+    <id>http://yoursite.com/2022/03/08/ss-and-bbr/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vultr搭建ss-Google-bbr-加速"><a href="#vultr搭建ss-Google-bbr-加速" class="headerlink" title="vultr搭建ss + Google bbr 加速"></a>vultr搭建ss + Google bbr 加速</h1><ul><li><p><strong>购买vultr并部署服务器(centOS7)</strong></p></li><li><p><code>https://www.vultr.com/?ref=7892970-4F</code></p></li><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><p><code>ssh root@ip</code></p></li><li><p><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code></p></li><li><p><code>chmod +x shadowsocks.sh</code></p></li><li><p><code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code></p></li><li><p>shadowsocks相关操作：启动、停止、重启、状态<code>/etc/init.d/shadowsocks start stop restart status</code></p></li><li><p>卸载shadowsocks<code>./shadowsocks.sh uninstall</code></p></li><li><p>单用户配置{<br>“server”:”your_server_ip”,<br>“server_port”:8989,<br>“local_address”:”127.0.0.1”,<br>“local_port”:1080,<br>“password”:”yourpassword”,<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p></li><li><p>多用户配置{<br>“server”:”your_server_ip”,<br>“local_address”: “127.0.0.1”,<br>“local_port”:1080,<br>“port_password”:{</p><pre><code>&quot;8989&quot;:&quot;password0&quot;,&quot;9001&quot;:&quot;password1&quot;,&quot;9002&quot;:&quot;password2&quot;,&quot;9003&quot;:&quot;password3&quot;,&quot;9004&quot;:&quot;password4&quot;</code></pre><p>},<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false<br>}</p></li><li><p><strong>安装bbr加速</strong></p></li><li><p><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></p></li><li><p><strong>输入以下命令，返回值中有bbr则证明安装加速成功</strong></p></li><li><p><code>sysctl net.ipv4.tcp_available_congestion_control</code></p></li><li><p><em>显示</em> <code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vultr搭建ss-Google-bbr-加速&quot;&gt;&lt;a href=&quot;#vultr搭建ss-Google-bbr-加速&quot; class=&quot;headerlink&quot; title=&quot;vultr搭建ss + Google bbr 加速&quot;&gt;&lt;/a&gt;vultr搭建ss + Goo
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git-ssh-key</title>
+    <link href="http://yoursite.com/2022/03/08/git-ssh-key/"/>
+    <id>http://yoursite.com/2022/03/08/git-ssh-key/</id>
+    <published>2022-03-08T09:47:37.996Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="设置git-sshkey"><a href="#设置git-sshkey" class="headerlink" title="设置git sshkey"></a>设置git sshkey</h1><ul><li><p><strong>首先设置git的名字和邮箱</strong></p></li><li><p><code>git config --global user.name &quot;yourname&quot;</code></p></li><li><p><code>git config --global user.email &quot;your@email.com&quot;</code></p></li><li><p><strong>然后如果有.ssh文件夹 先删除文件夹</strong></p></li><li><p><strong>然后输入git命令</strong></p></li><li><p><code>ssh-keygen -t rsa -C &quot;your@email.com&quot;</code></p></li><li><p><em>然后一直按回车就好</em></p></li><li><p><strong>最后在github添加sshkey，把你之前生成的在.ssh文件夹下的id_rsa.pub文件里的文本复制出来就ok了</strong></p></li><li><p>可以输入<code>ssh -T git@github.com</code>测试 输入<code>yes</code>就成功了</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;设置git-sshkey&quot;&gt;&lt;a href=&quot;#设置git-sshkey&quot; class=&quot;headerlink&quot; title=&quot;设置git sshkey&quot;&gt;&lt;/a&gt;设置git sshkey&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;首先设置git的名字和邮箱
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
