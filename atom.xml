@@ -17,28 +17,6 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>input-file-onchange</title>
-    <link href="http://yoursite.com/2022/03/08/input-file-onchange/"/>
-    <id>http://yoursite.com/2022/03/08/input-file-onchange/</id>
-    <published>2022-03-08T09:47:37.997Z</published>
-    <updated>2022-03-08T09:47:37.997Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="input-onchange事件触发问题"><a href="#input-onchange事件触发问题" class="headerlink" title="input onchange事件触发问题"></a><code>input onchange</code>事件触发问题</h1><h3 id="input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件"><a href="#input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件" class="headerlink" title="input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件"></a>input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了<code>onchange</code>事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input ref=<span class="string">'fileUpload'</span> onChange=&#123;<span class="keyword">this</span>.getFile&#125; id=<span class="string">"fileUpload"</span> type=<span class="string">"file"</span> className=<span class="string">"upload"</span>/&gt;</span><br></pre></td></tr></table></figure><h3 id="这是因为input的value值没有改变，需要我们手动清空一下-需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败"><a href="#这是因为input的value值没有改变，需要我们手动清空一下-需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败" class="headerlink" title="这是因为input的value值没有改变，需要我们手动清空一下,需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败"></a>这是因为<code>input</code>的value值没有改变，需要我们手动清空一下,需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.refs.fileUpload.value = <span class="literal">null</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;input-onchange事件触发问题&quot;&gt;&lt;a href=&quot;#input-onchange事件触发问题&quot; class=&quot;headerlink&quot; title=&quot;input onchange事件触发问题&quot;&gt;&lt;/a&gt;&lt;code&gt;input onchange&lt;/code
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>mac-reset-mysql-password</title>
     <link href="http://yoursite.com/2022/03/08/mac-reset-mysql-password/"/>
     <id>http://yoursite.com/2022/03/08/mac-reset-mysql-password/</id>
@@ -76,6 +54,28 @@
       
         &lt;h3 id=&quot;挂载写权限&quot;&gt;&lt;a href=&quot;#挂载写权限&quot; class=&quot;headerlink&quot; title=&quot;挂载写权限&quot;&gt;&lt;/a&gt;挂载写权限&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo mount -uw /&lt;/code&gt;&lt;/p&gt;
 
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>input-file-onchange</title>
+    <link href="http://yoursite.com/2022/03/08/input-file-onchange/"/>
+    <id>http://yoursite.com/2022/03/08/input-file-onchange/</id>
+    <published>2022-03-08T09:47:37.997Z</published>
+    <updated>2022-03-08T09:47:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="input-onchange事件触发问题"><a href="#input-onchange事件触发问题" class="headerlink" title="input onchange事件触发问题"></a><code>input onchange</code>事件触发问题</h1><h3 id="input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件"><a href="#input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件" class="headerlink" title="input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了onchange事件"></a>input在上传图片时，如果上传的图片跟之前最后一张上传的是同一张，就触发不了<code>onchange</code>事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input ref=<span class="string">'fileUpload'</span> onChange=&#123;<span class="keyword">this</span>.getFile&#125; id=<span class="string">"fileUpload"</span> type=<span class="string">"file"</span> className=<span class="string">"upload"</span>/&gt;</span><br></pre></td></tr></table></figure><h3 id="这是因为input的value值没有改变，需要我们手动清空一下-需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败"><a href="#这是因为input的value值没有改变，需要我们手动清空一下-需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败" class="headerlink" title="这是因为input的value值没有改变，需要我们手动清空一下,需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败"></a>这是因为<code>input</code>的value值没有改变，需要我们手动清空一下,需要注意的是清空value需要在图片上传完成后再清空，不然会上传失败</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.refs.fileUpload.value = <span class="literal">null</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;input-onchange事件触发问题&quot;&gt;&lt;a href=&quot;#input-onchange事件触发问题&quot; class=&quot;headerlink&quot; title=&quot;input onchange事件触发问题&quot;&gt;&lt;/a&gt;&lt;code&gt;input onchange&lt;/code
       
     
     </summary>
