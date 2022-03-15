@@ -94,7 +94,106 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/input-file-onchange/" data-id="cl0i0c7pu0000u61sf7xog3bs" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2022/03/08/input-file-onchange/" data-id="cl0rwyqac0001di1s35wefjii" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-mac-reset-mysql-password" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/08/mac-reset-mysql-password/" class="article-date">
+  <time datetime="2022-03-08T09:47:37.997Z" itemprop="datePublished">2022-03-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/08/mac-reset-mysql-password/">mac-reset-mysql-password</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="进行下述操作必须先停止mysql服务"><a href="#进行下述操作必须先停止mysql服务" class="headerlink" title="进行下述操作必须先停止mysql服务"></a>进行下述操作必须先停止mysql服务</h1><ul>
+<li>切换到mysql安装目录</li>
+<li><code>cd /usr/local/mysql/bin</code></li>
+<li>获取管理员权限</li>
+<li><code>sudo su</code></li>
+<li>开启mysql安全模式，可以跳过密码验证</li>
+<li><code>./mysqld_safe --skip-grant-tables &amp;</code></li>
+<li>回车然后输入<code>./mysql -u root</code>进入mysql</li>
+<li>启用mysql数据库</li>
+<li><code>use mysql;</code></li>
+<li>修改user表下root用户的登陆密码</li>
+<li><code>update user set authentication_string=‘111222’ where User=&#39;root&#39;;</code></li>
+</ul>
+<h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul>
+<li><p>MAC 允许任何来源安装的app</p>
+<p><code>sudo spctl --master-disable</code></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2022/03/08/mac-reset-mysql-password/" data-id="cl0rwyqae0002di1s5xjs0buy" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-mac挂载文件命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2022-03-08T09:47:37.997Z" itemprop="datePublished">2022-03-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">mac挂载文件命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="挂载写权限"><a href="#挂载写权限" class="headerlink" title="挂载写权限"></a>挂载写权限</h3><p><code>sudo mount -uw /</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" data-id="cl0rwyqaf0003di1sdwztbtn9" class="article-share-link">分享</a>
       
       
       
@@ -153,106 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/nextcloud/" data-id="cl0i0c7pz0001u61s1cck0g6m" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-mac挂载文件命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2022-03-08T09:47:37.997Z" itemprop="datePublished">2022-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/">mac挂载文件命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <h3 id="挂载写权限"><a href="#挂载写权限" class="headerlink" title="挂载写权限"></a>挂载写权限</h3><p><code>sudo mount -uw /</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/mac%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/" data-id="cl0i0c7q10002u61s97bbe72b" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-mac-reset-mysql-password" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/03/08/mac-reset-mysql-password/" class="article-date">
-  <time datetime="2022-03-08T09:47:37.997Z" itemprop="datePublished">2022-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/08/mac-reset-mysql-password/">mac-reset-mysql-password</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <h1 id="进行下述操作必须先停止mysql服务"><a href="#进行下述操作必须先停止mysql服务" class="headerlink" title="进行下述操作必须先停止mysql服务"></a>进行下述操作必须先停止mysql服务</h1><ul>
-<li>切换到mysql安装目录</li>
-<li><code>cd /usr/local/mysql/bin</code></li>
-<li>获取管理员权限</li>
-<li><code>sudo su</code></li>
-<li>开启mysql安全模式，可以跳过密码验证</li>
-<li><code>./mysqld_safe --skip-grant-tables &amp;</code></li>
-<li>回车然后输入<code>./mysql -u root</code>进入mysql</li>
-<li>启用mysql数据库</li>
-<li><code>use mysql;</code></li>
-<li>修改user表下root用户的登陆密码</li>
-<li><code>update user set authentication_string=‘111222’ where User=&#39;root&#39;;</code></li>
-</ul>
-<h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul>
-<li><p>MAC 允许任何来源安装的app</p>
-<p><code>sudo spctl --master-disable</code></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/mac-reset-mysql-password/" data-id="cl0i0c7q30003u61sbtwid5ii" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2022/03/08/nextcloud/" data-id="cl0rwyqah0004di1sgc6c4pts" class="article-share-link">分享</a>
       
       
       
@@ -321,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/prayer/" data-id="cl0i0c7q40004u61s87ty8dmk" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2022/03/08/prayer/" data-id="cl0rwyqai0005di1s3zmfgv0k" class="article-share-link">分享</a>
       
       
       
@@ -400,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/ss-and-bbr/" data-id="cl0i0c7q50005u61s51y56mb2" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2022/03/08/ss-and-bbr/" data-id="cl0rwyqau0006di1s2gf81xe2" class="article-share-link">分享</a>
       
       
       
@@ -460,7 +460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/03/08/git-ssh-key/" data-id="cl0i0c7q60006u61sbkd5gqf3" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2022/03/08/git-ssh-key/" data-id="cl0rwyqa40000di1s9lw5hbr9" class="article-share-link">分享</a>
       
       
       
@@ -514,7 +514,7 @@
           </li>
         
           <li>
-            <a href="/2022/03/08/nextcloud/">nextcloud</a>
+            <a href="/2022/03/08/mac-reset-mysql-password/">mac-reset-mysql-password</a>
           </li>
         
           <li>
@@ -522,7 +522,7 @@
           </li>
         
           <li>
-            <a href="/2022/03/08/mac-reset-mysql-password/">mac-reset-mysql-password</a>
+            <a href="/2022/03/08/nextcloud/">nextcloud</a>
           </li>
         
           <li>
@@ -558,7 +558,7 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2022 qilin55&nbsp;|&nbsp;
-      ICP备案号： <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备18045928号</a>
+      ICP备案号： <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备18045928号</a>&nbsp;公安机关备案号：33019202000298
     </div>
      <div id="footer-right">
       联系方式&nbsp;|&nbsp;lovefreedomlin@gmail.com

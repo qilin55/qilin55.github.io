@@ -39,20 +39,20 @@
   </entry>
   
   <entry>
-    <title>nextcloud</title>
-    <link href="http://yoursite.com/2022/03/08/nextcloud/"/>
-    <id>http://yoursite.com/2022/03/08/nextcloud/</id>
+    <title>mac-reset-mysql-password</title>
+    <link href="http://yoursite.com/2022/03/08/mac-reset-mysql-password/"/>
+    <id>http://yoursite.com/2022/03/08/mac-reset-mysql-password/</id>
     <published>2022-03-08T09:47:37.997Z</published>
     <updated>2022-03-08T09:47:37.997Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="自制云盘-nextcloud"><a href="#自制云盘-nextcloud" class="headerlink" title="自制云盘 nextcloud"></a>自制云盘 nextcloud</h1><ul><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><h1 id="通过yum源安装docker"><a href="#通过yum源安装docker" class="headerlink" title="通过yum源安装docker"></a>通过yum源安装docker</h1></li><li><p><code>sudo yum -y install docker</code></p></li><li><h1 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h1></li><li><p><code>sudo systemctl start docker</code></p></li><li><h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1></li><li><p><code>sudo systemctl enable docker</code></p></li><li><p><strong>获取nextcloud镜像, 完成网盘搭建</strong></p></li><li><p><code>docker run -d -p 8080:80 nextcloud</code></p></li><li><p><strong>访问自己ip的8080端口</strong></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="进行下述操作必须先停止mysql服务"><a href="#进行下述操作必须先停止mysql服务" class="headerlink" title="进行下述操作必须先停止mysql服务"></a>进行下述操作必须先停止mysql服务</h1><ul><li>切换到mysql安装目录</li><li><code>cd /usr/local/mysql/bin</code></li><li>获取管理员权限</li><li><code>sudo su</code></li><li>开启mysql安全模式，可以跳过密码验证</li><li><code>./mysqld_safe --skip-grant-tables &amp;</code></li><li>回车然后输入<code>./mysql -u root</code>进入mysql</li><li>启用mysql数据库</li><li><code>use mysql;</code></li><li>修改user表下root用户的登陆密码</li><li><code>update user set authentication_string=‘111222’ where User=&#39;root&#39;;</code></li></ul><h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul><li><p>MAC 允许任何来源安装的app</p><p><code>sudo spctl --master-disable</code></p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;自制云盘-nextcloud&quot;&gt;&lt;a href=&quot;#自制云盘-nextcloud&quot; class=&quot;headerlink&quot; title=&quot;自制云盘 nextcloud&quot;&gt;&lt;/a&gt;自制云盘 nextcloud&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;登陆到服务
+        &lt;h1 id=&quot;进行下述操作必须先停止mysql服务&quot;&gt;&lt;a href=&quot;#进行下述操作必须先停止mysql服务&quot; class=&quot;headerlink&quot; title=&quot;进行下述操作必须先停止mysql服务&quot;&gt;&lt;/a&gt;进行下述操作必须先停止mysql服务&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;
       
     
     </summary>
@@ -85,20 +85,20 @@
   </entry>
   
   <entry>
-    <title>mac-reset-mysql-password</title>
-    <link href="http://yoursite.com/2022/03/08/mac-reset-mysql-password/"/>
-    <id>http://yoursite.com/2022/03/08/mac-reset-mysql-password/</id>
+    <title>nextcloud</title>
+    <link href="http://yoursite.com/2022/03/08/nextcloud/"/>
+    <id>http://yoursite.com/2022/03/08/nextcloud/</id>
     <published>2022-03-08T09:47:37.997Z</published>
     <updated>2022-03-08T09:47:37.997Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="进行下述操作必须先停止mysql服务"><a href="#进行下述操作必须先停止mysql服务" class="headerlink" title="进行下述操作必须先停止mysql服务"></a>进行下述操作必须先停止mysql服务</h1><ul><li>切换到mysql安装目录</li><li><code>cd /usr/local/mysql/bin</code></li><li>获取管理员权限</li><li><code>sudo su</code></li><li>开启mysql安全模式，可以跳过密码验证</li><li><code>./mysqld_safe --skip-grant-tables &amp;</code></li><li>回车然后输入<code>./mysql -u root</code>进入mysql</li><li>启用mysql数据库</li><li><code>use mysql;</code></li><li>修改user表下root用户的登陆密码</li><li><code>update user set authentication_string=‘111222’ where User=&#39;root&#39;;</code></li></ul><h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul><li><p>MAC 允许任何来源安装的app</p><p><code>sudo spctl --master-disable</code></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="自制云盘-nextcloud"><a href="#自制云盘-nextcloud" class="headerlink" title="自制云盘 nextcloud"></a>自制云盘 nextcloud</h1><ul><li><p><strong>登陆到服务器并安装ss，配置信息会在安装好之后返回，要自己保存下来</strong></p></li><li><h1 id="通过yum源安装docker"><a href="#通过yum源安装docker" class="headerlink" title="通过yum源安装docker"></a>通过yum源安装docker</h1></li><li><p><code>sudo yum -y install docker</code></p></li><li><h1 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h1></li><li><p><code>sudo systemctl start docker</code></p></li><li><h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1></li><li><p><code>sudo systemctl enable docker</code></p></li><li><p><strong>获取nextcloud镜像, 完成网盘搭建</strong></p></li><li><p><code>docker run -d -p 8080:80 nextcloud</code></p></li><li><p><strong>访问自己ip的8080端口</strong></p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;进行下述操作必须先停止mysql服务&quot;&gt;&lt;a href=&quot;#进行下述操作必须先停止mysql服务&quot; class=&quot;headerlink&quot; title=&quot;进行下述操作必须先停止mysql服务&quot;&gt;&lt;/a&gt;进行下述操作必须先停止mysql服务&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;
+        &lt;h1 id=&quot;自制云盘-nextcloud&quot;&gt;&lt;a href=&quot;#自制云盘-nextcloud&quot; class=&quot;headerlink&quot; title=&quot;自制云盘 nextcloud&quot;&gt;&lt;/a&gt;自制云盘 nextcloud&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;登陆到服务
       
     
     </summary>
